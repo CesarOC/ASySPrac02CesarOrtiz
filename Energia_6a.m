@@ -1,5 +1,5 @@
 function [] = Energia_6a()
-%Esta funci�n calcula la energ�a de una funci�n simb�lica.
+%Esta función calcula la energía de una función simbólica.
 
 t = (-5:0.001:5); 
 y=@(t) (((t>=0) & (t<1)))+(-((t>1) & (t<2)));
@@ -38,7 +38,8 @@ subplot(2,2,1)
  axis ([-1 3 -2 3]);
  ax = gca;
  ax.XAxisLocation = 'origin'; ax.YAxisLocation = 'origin';
- 
+ disp('Se muestra la energ{ia de la señal h(t) para el inciso a')
  Energia_6(h)
+ disp('Se muestra la energ{ia de la señal h(t) para el inciso a')
  Energia_6(g)
 end
