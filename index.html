@@ -1,0 +1,273 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Pr&aacute;ctica 2: Se&ntilde;ales continuas</title><meta name="generator" content="MATLAB 9.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-04-02"><meta name="DC.source" content="Publisharchivos.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Pr&aacute;ctica 2: Se&ntilde;ales continuas</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#2">Solucion Problema 1</a></li><li><a href="#4">Solucion Problema 2</a></li><li><a href="#6">Solucion Problema 3</a></li><li><a href="#8">Solucion Problema 4</a></li><li><a href="#10">Solucion Problema 5</a></li><li><a href="#12">Solucion Problema 6</a></li><li><a href="#14">Solucion Problema 7</a></li></ul></div><pre class="codeinput"><span class="comment">%Integrantes del equipo: Ortega Gonzalez Moises Donaldo, Ortiz Colin Cesar Antonio, Zarate Murillo Jose Antonio</span>
+</pre><h2 id="2">Solucion Problema 1</h2><pre class="codeinput"><span class="comment">%function [f] = fun1(a,w)</span>
+<span class="comment">%f= (a)./(a.^2+w.^2);</span>
+<span class="comment">%end</span>
+</pre><h2 id="4">Solucion Problema 2</h2><pre class="codeinput"><span class="comment">%Escribimos en el Command Window el intervalo de w</span>
+W=-2:0.001:2;
+<span class="comment">%y hacemos llamado a nuestra funcion que gr&aacute;fica funciones de $f:R\rightarrow R$ a la cual nombramos como mifigura</span>
+mifigura(W,fun1(1,W))
+<span class="comment">%hacemos llamado a fun1 puesto que debemos graficar f(w)vs w</span>
+</pre><img vspace="5" hspace="5" src="Publisharchivos_01.png" alt=""> <h2 id="6">Solucion Problema 3</h2><pre class="codeinput"><span class="comment">%A continuacion se presentan las graficas respectivas a la solucion del problema dado</span>
+Fun3
+</pre><img vspace="5" hspace="5" src="Publisharchivos_02.png" alt=""> <img vspace="5" hspace="5" src="Publisharchivos_03.png" alt=""> <img vspace="5" hspace="5" src="Publisharchivos_04.png" alt=""> <img vspace="5" hspace="5" src="Publisharchivos_05.png" alt=""> <img vspace="5" hspace="5" src="Publisharchivos_06.png" alt=""> <img vspace="5" hspace="5" src="Publisharchivos_07.png" alt=""> <h2 id="8">Solucion Problema 4</h2><pre class="codeinput"><span class="comment">%Se presentan las graficas obtenidas ademas del resultado de los problemas dados en el planteamiento</span>
+fun4
+</pre><pre class="codeoutput">Primer resultado usando el comando sum
+    0.4367
+
+Calculo usando la recursividad de Simpson
+     0
+
+
+E_g =
+
+    0.2567
+
+Segundo calculo usando el comando sum
+    0.2567
+
+
+E_g2 =
+
+    0.2561
+
+Derivacion del calculo anterior ,calculo con mas precision usando la recursividad de Simpson
+    0.2561
+
+</pre><img vspace="5" hspace="5" src="Publisharchivos_08.png" alt=""> <img vspace="5" hspace="5" src="Publisharchivos_09.png" alt=""> <img vspace="5" hspace="5" src="Publisharchivos_10.png" alt=""> <img vspace="5" hspace="5" src="Publisharchivos_11.png" alt=""> <img vspace="5" hspace="5" src="Publisharchivos_12.png" alt=""> <img vspace="5" hspace="5" src="Publisharchivos_13.png" alt=""> <img vspace="5" hspace="5" src="Publisharchivos_14.png" alt=""> <img vspace="5" hspace="5" src="Publisharchivos_15.png" alt=""> <h2 id="10">Solucion Problema 5</h2><pre class="codeinput"><span class="comment">%A continuacion se muestran las graficas que son la solucion del problema</span>
+<span class="comment">%1.2.2</span>
+fun5
+</pre><img vspace="5" hspace="5" src="Publisharchivos_16.png" alt=""> <h2 id="12">Solucion Problema 6</h2><pre class="codeinput"><span class="comment">%Esta funci&oacute;n calcula la energ&iacute;a de una funci&oacute;n an&oacute;nima.</span>
+<span class="comment">%function [] = Energia_6(f)</span>
+
+<span class="comment">%Por lo tanto, se debe llamar a la funci&oacute;n Energia_6(@(t) f(t))</span>
+
+<span class="comment">%x = @(t)f(t).^2 ;</span>
+
+<span class="comment">%integral(x, -inf, inf)</span>
+<span class="comment">%end</span>
+<span class="comment">%a continuacion la solucion para el problema 1.1.3 inciso a</span>
+Energia_6a
+<span class="comment">%a continuacion la solucion para el problema 1.1.3 inciso b</span>
+Energia_6b
+<span class="comment">%a continuacion la solucion para el problema 1.1.3 inciso c</span>
+Energia_6c
+</pre><pre class="codeoutput">
+ans =
+
+    4.0000
+
+
+ans =
+
+    4.0000
+
+
+ans =
+
+    9.4248
+
+
+ans =
+
+    9.4248
+
+
+ans =
+
+    8.7124
+
+
+ans =
+
+    0.7124
+
+</pre><img vspace="5" hspace="5" src="Publisharchivos_17.png" alt=""> <h2 id="14">Solucion Problema 7</h2><pre class="codeinput"><span class="comment">%Funcion de potencia codigo sin ejecutar</span>
+<span class="comment">%function [Px] = potencia(X,t2,t1)</span>
+<span class="comment">%A=isa(X,'function handle');</span>
+<span class="comment">%    if A==1</span>
+<span class="comment">%        t=t2:0.001:t1;</span>
+<span class="comment">%        p=@(t) (X(t)).^2;</span>
+<span class="comment">%        Px=(1/(t1-t2)).*(integral(p,t2,t1));</span>
+<span class="comment">%    else</span>
+<span class="comment">%        syms tao;</span>
+<span class="comment">%        Px=limit((1/(2*tao)).*(int(X.^2,-tao,tao)),tao,inf);</span>
+<span class="comment">%    end</span>
+<span class="comment">%end</span>
+
+<span class="comment">%Ejecucion del codigo potencia7 para solucion de los incisos a,b,c del</span>
+<span class="comment">%problema1.1.4</span>
+Ej7
+</pre><pre class="codeoutput">En cuanto al resultado de Pot1 , se utiliza el codigo de potencia7 ,previamente definido, aqui se muestra el calculo en cuanto al inciso a
+
+Pot1 =
+
+    9.1429
+
+se muestra el resultado en RMS inciso a
+
+RMS1 =
+
+    3.0237
+
+En cuanto al resultado de Pot2, es analogo al anterior solo que muestra el resultado del inciso b
+
+Pot2 =
+
+   36.5714
+
+se muestra el resultado en RMS inciso b
+
+RMS2 =
+
+    6.0474
+
+En cuanto al resultado de Pot3, es analogo al anterior solo que muestra el resultado del inciso c
+ 
+Pot3 =
+ 
+piecewise(c == 0, 0, c ~= 0, Inf*c^2)
+ 
+se muestra el resultado en RMS inciso c
+ 
+RMS3 =
+ 
+piecewise(c == 0, 0, c ~= 0, Inf*(c^2)^(1/2))
+ 
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2017a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Práctica 2: Señales continuas
+%
+% 
+%%
+%Integrantes del equipo: Ortega Gonzalez Moises Donaldo, Ortiz Colin Cesar Antonio, Zarate Murillo Jose Antonio
+%% Solucion Problema 1
+%%
+%function [f] = fun1(a,w)
+%f= (a)./(a.^2+w.^2);
+%end
+%% Solucion Problema 2
+%%
+%Escribimos en el Command Window el intervalo de w
+W=-2:0.001:2;
+%y hacemos llamado a nuestra funcion que gráfica funciones de $f:R\rightarrow R$ a la cual nombramos como mifigura 
+mifigura(W,fun1(1,W))
+%hacemos llamado a fun1 puesto que debemos graficar f(w)vs w
+%% Solucion Problema 3
+%%
+%A continuacion se presentan las graficas respectivas a la solucion del problema dado
+Fun3
+
+%% Solucion Problema 4
+%%
+%Se presentan las graficas obtenidas ademas del resultado de los problemas dados en el planteamiento
+fun4
+%% Solucion Problema 5
+%%
+%A continuacion se muestran las graficas que son la solucion del problema
+%1.2.2
+fun5
+%% Solucion Problema 6
+%%
+%Esta función calcula la energía de una función anónima.
+%function [] = Energia_6(f)
+
+%Por lo tanto, se debe llamar a la función Energia_6(@(t) f(t))
+
+%x = @(t)f(t).^2 ;
+
+%integral(x, -inf, inf)
+%end
+%a continuacion la solucion para el problema 1.1.3 inciso a
+Energia_6a
+%a continuacion la solucion para el problema 1.1.3 inciso b
+Energia_6b
+%a continuacion la solucion para el problema 1.1.3 inciso c
+Energia_6c
+%% Solucion Problema 7
+%% 
+%Funcion de potencia codigo sin ejecutar
+%function [Px] = potencia(X,t2,t1)
+%A=isa(X,'function handle');
+%    if A==1
+%        t=t2:0.001:t1;
+%        p=@(t) (X(t)).^2;
+%        Px=(1/(t1-t2)).*(integral(p,t2,t1));
+%    else
+%        syms tao;
+%        Px=limit((1/(2*tao)).*(int(X.^2,-tao,tao)),tao,inf);
+%    end
+%end 
+
+%Ejecucion del codigo potencia7 para solucion de los incisos a,b,c del
+%problema1.1.4
+Ej7
+##### SOURCE END #####
+--></body></html>
