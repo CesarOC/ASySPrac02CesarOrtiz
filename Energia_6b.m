@@ -1,5 +1,5 @@
 function [] = Energia_6b()
-%Esta funci�n calcula la energ�a de una funci�n simb�lica.
+%Esta función calcula la energía de una función simbólica.
 
 t = (-5*pi:pi/480:5*pi); 
 x=@(t) (sin(t).*((t>=0) & (t<2*pi)));
@@ -46,8 +46,9 @@ subplot(2,2,1)
  ax.XAxisLocation = 'origin'; ax.YAxisLocation = 'origin';
  set(gca,'XTick',0:pi/2:2*pi) 
  set(gca,'XTickLabel',{'0','pi/2','pi','3*pi/2','2*pi'})
- 
+ disp('Se muestra la energ{ia de la señal h(t) para el inciso b')
  Energia_6(h)
+ disp('Se muestra la energ{ia de la señal h(t) para el inciso b')
  Energia_6(g)
 end
 
