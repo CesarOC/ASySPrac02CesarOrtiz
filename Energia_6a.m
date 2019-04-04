@@ -11,7 +11,7 @@ subplot(2,2,1)
  plot(t,x(t));
  title('x(t)')
  xlabel('t'); ylabel('x(t)');
- axis ([-1 3 -2 3]);
+ axis ([-1 3 -3 3]);
  ax = gca;
  ax.XAxisLocation = 'origin'; ax.YAxisLocation = 'origin';
  
@@ -19,7 +19,7 @@ subplot(2,2,1)
  plot(t,y(t));
  title('y(t)')
  xlabel('t'); ylabel('y(t)');
- axis ([-1 3 -2 3]);
+ axis ([-1 3 -3 3]);
  ax = gca;
  ax.XAxisLocation = 'origin'; ax.YAxisLocation = 'origin';
  
@@ -27,7 +27,7 @@ subplot(2,2,1)
  plot(t,h(t));
  title('h(t)=x(t)+y(t)')
  xlabel('t'); ylabel('h(t)');
- axis ([-1 3 -2 3]);
+ axis ([-1 3 -3 3]);
  ax = gca;
  ax.XAxisLocation = 'origin'; ax.YAxisLocation = 'origin';
  
@@ -35,7 +35,7 @@ subplot(2,2,1)
  plot(t,g(t));
  title('g(t)=x(t)-y(t)')
  xlabel('t'); ylabel('g(t)');
- axis ([-1 3 -2 3]);
+ axis ([-1 3 -3 3]);
  ax = gca;
  ax.XAxisLocation = 'origin'; ax.YAxisLocation = 'origin';
  disp('Se muestra la energ{ia de la señal h(t) para el inciso a')
